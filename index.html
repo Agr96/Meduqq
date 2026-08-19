@@ -293,6 +293,16 @@
     display:flex; align-items:flex-end;
   }
   .frame svg{position:absolute; inset:0; width:100%; height:100%;}
+  .frame img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    transition:transform .6s ease;
+  }
+  .frame:hover img{transform:scale(1.04);}
+  .frame::after{
+    content:"";
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, transparent 45%, rgba(20,29,46,0.75) 100%);
+  }
   .frame-caption{
     position:relative; z-index:2; padding:1.4rem; color:var(--cream);
   }
@@ -540,66 +550,30 @@
     <span class="eyebrow">A glimpse from above</span>
     <h2 class="serif">What your story could look like</h2>
   </div>
-  <p class="gallery-note reveal">Illustrative frames — every real session is shot fresh, on location, around your own couple.</p>
+  <p class="gallery-note reveal">Real sessions, shot from above — every couple gets their own story, their own light.</p>
   <div class="wrap gallery-grid reveal">
 
     <div class="frame">
-      <svg viewBox="0 0 300 375" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#e7a98f"/>
-            <stop offset="100%" stop-color="#141d2e"/>
-          </linearGradient>
-        </defs>
-        <rect width="300" height="375" fill="url(#g1)"/>
-        <circle cx="150" cy="180" r="70" fill="none" stroke="#f6f0e5" stroke-width="1" opacity="0.5"/>
-        <circle cx="140" cy="185" r="4" fill="#f6f0e5"/>
-        <circle cx="160" cy="182" r="4" fill="#f6f0e5"/>
-        <path d="M0 300 Q150 260 300 300 L300 375 L0 375 Z" fill="#141d2e" opacity="0.35"/>
-      </svg>
-      <div class="frame-caption">
-        <span class="eyebrow">Sweet Moment</span>
-        <h4>Sunset beach walk</h4>
-      </div>
-    </div>
-
-    <div class="frame">
-      <svg viewBox="0 0 300 375" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#d3a75a"/>
-            <stop offset="100%" stop-color="#2c3c52"/>
-          </linearGradient>
-        </defs>
-        <rect width="300" height="375" fill="url(#g2)"/>
-        <path d="M0 250 L100 140 L160 210 L220 110 L300 240 L300 375 L0 375 Z" fill="#141d2e" opacity="0.4"/>
-        <circle cx="148" cy="200" r="4" fill="#f6f0e5"/>
-        <circle cx="162" cy="204" r="4" fill="#f6f0e5"/>
-        <circle cx="155" cy="202" r="55" fill="none" stroke="#f6f0e5" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"/>
-      </svg>
+      <img src="images/gallery-01.png" alt="Aerial view of a couple embracing on a bridge surrounded by trees" loading="lazy">
       <div class="frame-caption">
         <span class="eyebrow">Forever</span>
-        <h4>Ridge-top proposal</h4>
+        <h4>Bridge, wrapped in trees</h4>
       </div>
     </div>
 
     <div class="frame">
-      <svg viewBox="0 0 300 375" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#f6f0e5"/>
-            <stop offset="100%" stop-color="#141d2e"/>
-          </linearGradient>
-        </defs>
-        <rect width="300" height="375" fill="url(#g3)"/>
-        <circle cx="150" cy="190" r="90" fill="none" stroke="#e7a98f" stroke-width="1" opacity="0.6"/>
-        <circle cx="150" cy="190" r="55" fill="none" stroke="#e7a98f" stroke-width="1" opacity="0.4"/>
-        <circle cx="140" cy="192" r="4" fill="#141d2e"/>
-        <circle cx="160" cy="188" r="4" fill="#141d2e"/>
-      </svg>
+      <img src="images/gallery-02.png" alt="Aerial view of a couple dancing on a forest path in golden light" loading="lazy">
       <div class="frame-caption">
-        <span class="eyebrow">The Whole Day</span>
-        <h4>From sunrise to last light</h4>
+        <span class="eyebrow">Love Story</span>
+        <h4>First dance, forest floor</h4>
+      </div>
+    </div>
+
+    <div class="frame">
+      <img src="images/gallery-03.png" alt="Aerial view of a couple embracing on a wooden dock over water" loading="lazy">
+      <div class="frame-caption">
+        <span class="eyebrow">Sweet Moment</span>
+        <h4>Still, on the water</h4>
       </div>
     </div>
 
@@ -657,7 +631,7 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/6280000000000?text=Hi%20Skybound%2C%20I%27d%20like%20to%20book%20a%20session" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a class="wa-float" href="https://wa.me/6285739198865?text=Hi%20Skybound%2C%20I%27d%20like%20to%20book%20a%20session" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.06 2.87 1.21 3.07c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.12.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z" fill="currentColor"/>
     <path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.84.5 3.56 1.36 5.04L2 22l5.1-1.33A9.94 9.94 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2zm0 18.1c-1.6 0-3.1-.43-4.4-1.2l-.32-.19-3.02.79.8-2.94-.21-.3A8.1 8.1 0 1 1 20.1 12c0 4.47-3.63 8.1-8.09 8.1z" fill="currentColor"/>
